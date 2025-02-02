@@ -48,7 +48,7 @@ class CrosshairApp:
         color = self.selected_color.get()
         size = self.selected_size.get()
         image_path = os.path.join(CROSSHAIR_PATH, COLORS[color])
-        img = Image.open(image_path).resize(SIZES[size], Image.ANTIALIAS)
+        img = Image.open(image_path).resize(SIZES[size], Image.LANCZOS)
         self.display_crosshair(img)
     
     def display_crosshair(self, img):
